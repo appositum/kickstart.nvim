@@ -191,6 +191,9 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- vim.keymap.set("n", "<C-S-k>", "<C-w>K", { desc = "Move window to the upper" })
 
 -- custom added keymaps:
+vim.keymap.set('n', 'k', 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"', { desc = 'Move up through wrapped lines', expr = true })
+vim.keymap.set('n', 'j', 'v:count || mode(1)[0:1] == "no" ? "j" : "gj"', { desc = 'Move down through wrapped lines', expr = true })
+
 vim.keymap.set('n', 'x', '"_x', { desc = 'Delete without copying' })
 vim.keymap.set('n', '<leader>o', 'o<Esc>', { desc = 'Insert bottom newline' })
 vim.keymap.set('n', '<leader>O', 'O<Esc>', { desc = 'Insert top newline' })
