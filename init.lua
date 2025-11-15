@@ -207,6 +207,8 @@ vim.keymap.set('i', '<C-j>', '<Down>', { desc = 'Move down' })
 vim.keymap.set('i', '<C-k>', '<Up>', { desc = 'Move up' })
 vim.keymap.set('i', '<C-d>', '<Delete>', { desc = 'Delete in insert mode' })
 vim.keymap.set('i', '<C-x>', '<Backspace>', { desc = 'Backspace in insert mode' })
+vim.keymap.set('v', '<', '<gv', { desc = 'Indent line' })
+vim.keymap.set('v', '>', '>gv', { desc = 'Indent line' })
 
 vim.keymap.set('n', '<leader>l', function()
   vim.diagnostic.open_float()
