@@ -484,12 +484,14 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = '[F]uzzy [F]iles' })
       -- vim.keymap.set('n', '<leader>ss', builtin.builtin, { desc = '[F]uzzy [S]elect Telescope' })
       vim.keymap.set('n', '<leader>fw', builtin.grep_string, { desc = '[F]uzzy current [W]ord' })
-      vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = '[F]uzzy by [G]rep' })
+      vim.keymap.set('n', '<leader>fl', builtin.live_grep, { desc = '[F]uzzy [L]ive grep' })
+      vim.keymap.set('n', '<leader>fgc', builtin.git_commits, { desc = '[F]uzzy [G]it [C]ommits' })
+      vim.keymap.set('n', '<leader>fgs', builtin.git_status, { desc = '[F]uzzy [G]it [S]tatus' })
       vim.keymap.set('n', '<leader>fd', builtin.diagnostics, { desc = '[F]uzzy [D]iagnostics' })
-      -- vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
+      vim.keymap.set('n', '<leader>fr', builtin.resume, { desc = '[F]uzzy [R]esume' })
       vim.keymap.set('n', '<leader>fo', builtin.oldfiles, { desc = '[F]uzzy Recent Files ("." for repeat)' })
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
-      vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = '[ ] Find existing buffers' })
+      vim.keymap.set('n', '<leader>fs', builtin.current_buffer_fuzzy_find, { desc = '[F]uzzy current [B]uffer' })
 
       -- Slightly advanced example of overriding default behavior and theme
       vim.keymap.set('n', '<leader>/', function()
