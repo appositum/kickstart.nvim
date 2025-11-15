@@ -462,6 +462,8 @@ require('lazy').setup({
             mappings = {
               n = {
                 ['<leader>d'] = 'delete_buffer',
+                ['<leader>s'] = 'file_split',
+                ['<leader>v'] = 'file_vsplit',
               },
             },
           },
