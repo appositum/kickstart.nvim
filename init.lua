@@ -204,7 +204,22 @@ vim.keymap.set('n', '<leader>b', ':Neotree focus<cr>', { desc = 'Open neotree' }
 vim.keymap.set('i', '<C-h>', '<Left>', { desc = 'Move left' })
 vim.keymap.set('i', '<C-l>', '<Right>', { desc = 'Move right' })
 vim.keymap.set('i', '<C-j>', '<Down>', { desc = 'Move down' })
-vim.keymap.set('i', '<C-k>', '<Up>', { desc = 'Move up', noremap = true, nowait = true, silent = true })
+vim.keymap.set('i', '<C-k>', '<Up>', { desc = 'Move up' })
+vim.keymap.set('n', '<leader>l', function()
+  vim.diagnostic.open_float()
+end)
+
+vim.keymap.set('n', 'L', function()
+  vim.diagnostic.config { virtual_lines = { current_line = true }, virtual_text = false }
+
+  vim.api.nvim_create_autocmd('CursorMoved', {
+    group = vim.api.nvim_create_augroup('line-diagnostics', { clear = true }),
+    callback = function()
+      vim.diagnostic.config { virtual_lines = false, virtual_text = true }
+      return true
+    end,
+  })
+end)
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
