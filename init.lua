@@ -200,12 +200,18 @@ vim.keymap.set('n', 'mk', '"zddk"zP', { desc = 'Move line up' })
 vim.keymap.set('n', '<leader>a', ':keepjumps normal! ggVG<cr>', { desc = 'Select all' })
 vim.keymap.set('n', '<leader>r', ':reg<cr>', { desc = 'Open registers' })
 vim.keymap.set('n', '<leader>e', ':Neotree focus<cr>', { desc = 'Open neotree' })
+vim.keymap.set('n', '<leader>bk', '<cmd>bdelete<cr>', { desc = 'Kill current buffer' })
+vim.keymap.set('n', '<leader>bl', '<cmd>buffer #<cr>', { desc = 'Switch back to last buffer' })
+vim.keymap.set('n', '<leader>bn', '<cmd>bn<cr>', { desc = 'Next buffer' })
+vim.keymap.set('n', '<leader>bp', '<cmd>bp<cr>', { desc = 'Previous buffer' })
+
 vim.keymap.set('i', '<C-h>', '<Left>', { desc = 'Move left' })
 vim.keymap.set('i', '<C-l>', '<Right>', { desc = 'Move right' })
 vim.keymap.set('i', '<C-j>', '<Down>', { desc = 'Move down' })
 vim.keymap.set('i', '<C-k>', '<Up>', { desc = 'Move up' })
 vim.keymap.set('i', '<C-d>', '<Delete>', { desc = 'Delete in insert mode' })
 vim.keymap.set('i', '<C-x>', '<Backspace>', { desc = 'Backspace in insert mode' })
+
 vim.keymap.set('v', '<', '<gv', { desc = 'Indent line' })
 vim.keymap.set('v', '>', '>gv', { desc = 'Indent line' })
 
