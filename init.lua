@@ -257,7 +257,15 @@ vim.api.nvim_create_autocmd({ 'InsertEnter' }, {
 })
 
 vim.api.nvim_create_autocmd({ 'InsertLeave' }, {
-  command = 'set number relativenumber',
+  callback = function(ev)
+    -- remove line numbers in lazygit window
+    if string.match(ev.file, 'lazygit$') then
+      vim.o.relativenumber = false
+      vim.o.number = false
+    else
+      vim.o.relativenumber = true
+    end
+  end,
 })
 
 -- [[ Install `lazy.nvim` plugin manager ]]
