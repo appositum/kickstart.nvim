@@ -218,6 +218,8 @@ vim.keymap.set('i', '<C-x>', '<Backspace>', { desc = 'Backspace in insert mode' 
 vim.keymap.set('v', '<', '<gv', { desc = 'Indent line' })
 vim.keymap.set('v', '>', '>gv', { desc = 'Indent line' })
 
+vim.keymap.set('x', 'p', 'P', { desc = 'Paste without yanking in visual mode' })
+
 vim.keymap.set('n', '<leader>l', function()
   vim.diagnostic.open_float()
 end)
