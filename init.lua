@@ -198,6 +198,8 @@ vim.keymap.set('n', 'j', 'v:count || mode(1)[0:1] == "no" ? "j" : "gj"', { desc 
 vim.keymap.set('n', 'x', '"_x', { desc = 'Delete without copying' })
 vim.keymap.set('n', '<leader>o', 'o<Esc>', { desc = 'Insert bottom newline' })
 vim.keymap.set('n', '<leader>O', 'O<Esc>', { desc = 'Insert top newline' })
+vim.keymap.set('n', '<leader>s', 'i<Space><Esc>', { desc = 'Insert whitespace on cursor' })
+vim.keymap.set('n', '<leader>S', 'a<Space><Esc>', { desc = 'Insert whitespace after cursor' })
 vim.keymap.set('n', '<leader>w', '<cmd>write<cr>', { desc = 'Save file' })
 vim.keymap.set('n', 'mj', '"zdd"zp', { desc = 'Move line down' })
 vim.keymap.set('n', 'mk', '"zddk"zP', { desc = 'Move line up' })
