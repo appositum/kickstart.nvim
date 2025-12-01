@@ -138,7 +138,7 @@ vim.o.inccommand = 'split'
 vim.o.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.o.scrolloff = 10
+vim.o.scrolloff = 5
 
 -- if performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
 -- instead raise a dialog asking if you wish to save the current file(s)
@@ -206,7 +206,7 @@ vim.keymap.set('n', 'mk', '"zddk"zP', { desc = 'Move line up' })
 vim.keymap.set('n', '<leader>a', ':keepjumps normal! ggVG<cr>', { desc = 'Select all' })
 vim.keymap.set('n', '<leader>r', ':reg<cr>', { desc = 'Open registers' })
 vim.keymap.set('n', '<leader>e', ':Neotree focus<cr>', { desc = 'Open neotree' })
-vim.keymap.set('n', '<leader>bk', '<cmd>bdelete<cr>', { desc = 'Kill current buffer' })
+vim.keymap.set('n', '<leader>bd', '<cmd>bdelete<cr>', { desc = 'Delete current buffer' })
 vim.keymap.set('n', '<leader>bl', '<cmd>buffer #<cr>', { desc = 'Switch back to last buffer' })
 vim.keymap.set('n', '<leader>bn', '<cmd>bn<cr>', { desc = 'Next buffer' })
 vim.keymap.set('n', '<leader>bp', '<cmd>bp<cr>', { desc = 'Previous buffer' })
