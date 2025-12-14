@@ -52,18 +52,27 @@ return {
           options = {
             theme = 'catppuccin_mocha',
             icons_enabled = true,
-            component_separators = { left = '', right = '' },
-            section_separators = { left = '', right = '' },
+            -- component_separators = { left = '', right = '' },
+            -- section_separators = { left = '', right = '' },
+
             -- component_separators = { left = '', right = '' },
             -- section_separators = { left = '', right = '' },
+
+            -- component_separators = { left = '', right = '' },
+            -- section_separators = { left = '', right = '' },
+
+            component_separators = { left = '|', right = '|' },
+            section_separators = { left = '', right = '' },
           },
           sections = {
-            lualine_a = { {
-              'mode',
-              fmt = function(s)
-                return ' ' .. (MODE_MAP[s] or s)
-              end,
-            } },
+            lualine_a = {
+              {
+                'mode',
+                fmt = function(s)
+                  return ' ' .. (MODE_MAP[s] or s)
+                end,
+              },
+            },
             lualine_b = {
               {
                 'filetype',
