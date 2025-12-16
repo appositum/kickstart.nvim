@@ -484,6 +484,10 @@ require('lazy').setup({
               },
             },
           },
+
+          oldfiles = {
+            initial_mode = 'normal',
+          },
         },
         extensions = {
           ['ui-select'] = {
