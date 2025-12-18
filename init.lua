@@ -210,7 +210,7 @@ vim.keymap.set('n', '<leader>bd', '<cmd>bdelete<cr>', { desc = 'Delete current b
 vim.keymap.set('n', '<leader>bl', '<cmd>buffer #<cr>', { desc = 'Switch back to last buffer' })
 vim.keymap.set('n', '<leader>bn', '<cmd>bn<cr>', { desc = 'Next buffer' })
 vim.keymap.set('n', '<leader>bp', '<cmd>bp<cr>', { desc = 'Previous buffer' })
-vim.keymap.set('n', '<leader>x', ':x<cr>', { desc = 'Save and close buffer' })
+vim.keymap.set('n', '<leader>x', ':w<cr><cmd>bdelete<cr>', { desc = 'Save and close buffer' })
 
 vim.keymap.set('i', '<C-h>', '<Left>', { desc = 'Move left' })
 vim.keymap.set('i', '<C-l>', '<Right>', { desc = 'Move right' })
