@@ -489,6 +489,10 @@ require('lazy').setup({
           oldfiles = {
             initial_mode = 'normal',
           },
+
+          grep_string = {
+            initial_mode = 'normal',
+          },
         },
         extensions = {
           ['ui-select'] = {
@@ -513,9 +517,15 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>fgs', builtin.git_status, { desc = '[F]uzzy [G]it [S]tatus' })
       vim.keymap.set('n', '<leader>fd', builtin.diagnostics, { desc = '[F]uzzy [D]iagnostics' })
       vim.keymap.set('n', '<leader>fr', builtin.resume, { desc = '[F]uzzy [R]esume' })
-      vim.keymap.set('n', '<leader>fo', builtin.oldfiles, { desc = '[F]uzzy Recent Files ("." for repeat)' })
+      vim.keymap.set('n', '<leader>fo', builtin.oldfiles, { desc = '[F]uzzy [O]ld Files ("." for repeat)' })
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
       vim.keymap.set('n', '<leader>fs', builtin.current_buffer_fuzzy_find, { desc = '[F]uzzy current [B]uffer' })
+      vim.api.nvim_set_keymap(
+        'v',
+        '<C-f>',
+        'y<ESC>:Telescope live_grep default_text=<c-r>0<CR>',
+        { desc = 'Fuzzy find selected text', noremap = true, silent = true }
+      )
 
       -- Slightly advanced example of overriding default behavior and theme
       vim.keymap.set('n', '<leader>/', function()
