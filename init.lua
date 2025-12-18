@@ -520,11 +520,21 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>fo', builtin.oldfiles, { desc = '[F]uzzy [O]ld Files ("." for repeat)' })
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
       vim.keymap.set('n', '<leader>fs', builtin.current_buffer_fuzzy_find, { desc = '[F]uzzy current [B]uffer' })
-      vim.api.nvim_set_keymap(
+
+      -- in visual mode, search for the selected text with fuzzy live grep
+      vim.keymap.set(
         'v',
         '<C-f>',
-        'y<ESC>:Telescope live_grep default_text=<c-r>0<CR>',
-        { desc = 'Fuzzy find selected text', noremap = true, silent = true }
+        -- that escaping is insane but it's the only way i managed to do it
+        'y<ESC>:let @0 = substitute(@0, " ", "\\\\\\\\ ", "g")<CR>:Telescope live_grep default_text=<c-r>0<CR>',
+        { desc = 'Fuzzy find selected text in live grep', noremap = true, silent = true }
+      )
+
+      vim.keymap.set(
+        'v',
+        '<C-s>',
+        'y<ESC>:let @0 = substitute(@0, " ", "\\\\\\\\ ", "g")<CR>:Telescope current_buffer_fuzzy_find default_text=<c-r>0<CR>',
+        { desc = 'Fuzzy find selected text in current buffer', noremap = true, silent = true }
       )
 
       -- Slightly advanced example of overriding default behavior and theme
