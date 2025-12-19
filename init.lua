@@ -488,6 +488,12 @@ require('lazy').setup({
 
           oldfiles = {
             initial_mode = 'normal',
+            mappings = {
+              n = {
+                ['<leader>s'] = 'file_split',
+                ['<leader>v'] = 'file_vsplit',
+              },
+            },
           },
 
           grep_string = {
