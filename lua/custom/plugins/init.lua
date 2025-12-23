@@ -100,7 +100,8 @@ return {
                 'diff',
                 symbols = {
                   added = ' ',
-                  modified = ' ',
+                  -- modified = ' ',
+                  modified = ' ',
                   removed = ' ',
                 },
               },
