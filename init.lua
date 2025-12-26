@@ -525,7 +525,7 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>fr', builtin.resume, { desc = '[F]uzzy [R]esume' })
       vim.keymap.set('n', '<leader>fo', builtin.oldfiles, { desc = '[F]uzzy [O]ld Files ("." for repeat)' })
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
-      vim.keymap.set('n', '<leader>fs', builtin.current_buffer_fuzzy_find, { desc = '[F]uzzy current [B]uffer' })
+      vim.keymap.set('n', '<leader>fs', builtin.current_buffer_fuzzy_find, { desc = '[F]uzzily [S]earch in current buffer' })
 
       -- in visual mode, search for the selected text with fuzzy live grep
       vim.keymap.set(
@@ -853,7 +853,7 @@ require('lazy').setup({
           require('conform').format { async = true, lsp_format = 'fallback' }
         end,
         mode = '',
-        desc = '[F]ormat buffer',
+        desc = '[F]or[M]at buffer',
       },
     },
     opts = {
