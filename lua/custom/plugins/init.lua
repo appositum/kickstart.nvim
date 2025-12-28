@@ -229,13 +229,13 @@ return {
     'vimwiki/vimwiki',
     -- event = 'BufEnter *.md',
     -- keys = { '<leader>ww', '<leader>wt'},
-    init = function ()
+    init = function()
       vim.g.vimwiki_list = {
         {
-          path = '~/vimwiki',
+          path = '~/notes',
           syntax = 'markdown',
           ext = 'md',
-        }
+        },
       }
     end,
   },
