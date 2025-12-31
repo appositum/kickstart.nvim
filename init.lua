@@ -1,3 +1,4 @@
+require('custom.options')
 
 -- Set <space> as the leader key
 -- See `:help mapleader`
@@ -82,13 +83,6 @@ vim.o.scrolloff = 5
 -- instead raise a dialog asking if you wish to save the current file(s)
 -- See `:help 'confirm'`
 vim.o.confirm = true
-
--- custom added options:
-vim.o.encoding = 'utf8'
-vim.o.expandtab = true -- spaces when pressing tab
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 2
-vim.opt.shiftwidth = 4
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
