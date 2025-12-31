@@ -153,6 +153,7 @@ rtp:prepend(lazypath)
 require('custom.autocommands')
 require('custom.keymaps')
 require('custom.options')
+require('custom.theme')
 
 -- [[ Configure and install plugins ]]
 --
@@ -1008,6 +1009,8 @@ require('lazy').setup({
     },
   },
 })
+
+vim.cmd.colorscheme(THEME_NVIM)
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

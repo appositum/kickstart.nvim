@@ -1,7 +1,5 @@
--- You can add your own plugins here or in other files in this directory!
---  I promise not to create any merge conflicts in this directory :)
---
--- See the kickstart.nvim README for more information
+require('custom.theme')
+
 return {
   {
     'kdheepak/lazygit.nvim',
@@ -33,8 +31,6 @@ return {
           comments = { 'nocombine' }, -- Disable italics in comments
         },
       }
-
-      vim.cmd.colorscheme 'catppuccin'
     end,
   },
   {
@@ -64,7 +60,7 @@ return {
       }
       require('lualine').setup {
         options = {
-          theme = 'catppuccin_mocha',
+          theme = THEME_LUALINE,
           icons_enabled = true,
           -- component_separators = { left = '', right = '' },
           -- section_separators = { left = '', right = '' },
@@ -238,6 +234,9 @@ return {
       height = 0.9,
       autoinstall = true,
     },
+  },
+  {
+    dir = '~/todo.nvim/',
   },
   {
     'vimwiki/vimwiki',
