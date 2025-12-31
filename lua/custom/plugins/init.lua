@@ -24,6 +24,20 @@ return {
     },
   },
   {
+    'catppuccin/nvim',
+    name = 'catppuccin',
+    priority = 1000,
+    config = function()
+      require('catppuccin').setup {
+        styles = {
+          comments = { 'nocombine' }, -- Disable italics in comments
+        },
+      }
+
+      vim.cmd.colorscheme 'catppuccin'
+    end,
+  },
+  {
     'nvim-lualine/lualine.nvim',
     dependencies = {
       'nvim-tree/nvim-web-devicons',
