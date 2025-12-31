@@ -102,7 +102,12 @@ return {
                 left = 1,
               },
             },
-            'filename',
+            {
+              'filename',
+              symbols = {
+                modified = '',
+              },
+            },
             {
               'diagnostics',
               symbols = {
