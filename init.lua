@@ -1,7 +1,3 @@
-require('custom.autocommands')
-require('custom.keymaps')
-require('custom.options')
-
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
@@ -153,6 +149,10 @@ end
 ---@type vim.Option
 local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
+
+require('custom.autocommands')
+require('custom.keymaps')
+require('custom.options')
 
 -- [[ Configure and install plugins ]]
 --
