@@ -34,6 +34,14 @@ return {
     end,
   },
   {
+    'sainnhe/everforest',
+    priority = 1000,
+  },
+  {
+    'thesimonho/kanagawa-paper.nvim',
+    priority = 1000,
+  },
+  {
     'nvim-lualine/lualine.nvim',
     dependencies = {
       'nvim-tree/nvim-web-devicons',
