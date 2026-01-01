@@ -48,23 +48,23 @@ return {
     },
     config = function()
       MODE_MAP = {
-        ['NORMAL'] = 'N',
+        ['NORMAL'] = 'N ',
         ['O-PENDING'] = 'N?',
-        ['INSERT'] = 'I',
-        ['VISUAL'] = 'V',
+        ['INSERT'] = 'I ',
+        ['VISUAL'] = 'V ',
         ['V-BLOCK'] = 'VB',
         ['V-LINE'] = 'VL',
         ['V-REPLACE'] = 'VR',
-        ['REPLACE'] = 'R',
-        ['COMMAND'] = '!',
+        ['REPLACE'] = 'R ',
+        ['COMMAND'] = '! ',
         ['SHELL'] = 'SH',
-        ['TERMINAL'] = 'T',
-        ['EX'] = 'X',
+        ['TERMINAL'] = 'T ',
+        ['EX'] = 'X ',
         ['S-BLOCK'] = 'SB',
         ['S-LINE'] = 'SL',
-        ['SELECT'] = 'S',
+        ['SELECT'] = 'S ',
         ['CONFIRM'] = 'Y?',
-        ['MORE'] = 'M',
+        ['MORE'] = 'M ',
       }
       require('lualine').setup {
         options = {
@@ -247,9 +247,6 @@ return {
       height = 0.9,
       autoinstall = true,
     },
-  },
-  {
-    dir = '~/todo.nvim/',
   },
   {
     'vimwiki/vimwiki',
