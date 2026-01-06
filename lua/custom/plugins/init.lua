@@ -280,4 +280,7 @@ return {
       kulala_keymaps_prefix = '',
     },
   },
+  {
+    'numToStr/FTerm.nvim',
+  },
 }

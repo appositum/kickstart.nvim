@@ -14,3 +14,24 @@ vim.api.nvim_create_autocmd({ 'InsertLeave' }, {
     end
   end,
 })
+
+local function split(s)
+  local res = {}
+
+  -- [^%s]+
+  for word in string.gmatch(s, '%a+') do
+    table.insert(res, word)
+  end
+
+  return res
+end
+
+
+vim.api.nvim_create_user_command('FTermToggle', require('FTerm').toggle, { bang = true })
+vim.api.nvim_create_user_command('FTermExit', require('FTerm').exit, { bang = true })
+vim.api.nvim_create_user_command('FTermRun', function(opts)
+  -- require('FTerm').scratch { cmd = { 'cargo', 'build' } }
+  local command = split(opts.args)
+
+  require('FTerm').scratch({ cmd = command })
+end, { bang = true, nargs = '?' })
