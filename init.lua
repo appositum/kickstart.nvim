@@ -150,11 +150,6 @@ end
 local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
 
-require('custom.autocommands')
-require('custom.keymaps')
-require('custom.options')
-require('custom.theme')
-
 -- [[ Configure and install plugins ]]
 --
 --  To check the current status of your plugins, run
@@ -1009,6 +1004,11 @@ require('lazy').setup({
     },
   },
 })
+
+require('custom.options')
+require('custom.autocommands')
+require('custom.keymaps')
+require('custom.theme')
 
 vim.cmd.colorscheme(THEME_NVIM)
 
