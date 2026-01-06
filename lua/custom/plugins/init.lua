@@ -1,4 +1,4 @@
-require('custom.theme')
+require 'custom.theme'
 
 return {
   {
@@ -35,6 +35,10 @@ return {
   },
   {
     'sainnhe/everforest',
+    priority = 1000,
+  },
+  {
+    'rebelot/kanagawa.nvim',
     priority = 1000,
   },
   {
