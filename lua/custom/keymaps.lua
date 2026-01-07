@@ -16,7 +16,6 @@ vim.keymap.set('n', '<leader>bn', '<cmd>bn<cr>', { desc = 'Next buffer' })
 vim.keymap.set('n', '<leader>bp', '<cmd>bp<cr>', { desc = 'Previous buffer' })
 vim.keymap.set('n', "<leader>'", "cw'<Esc>pa'<Esc>", { desc = 'Wrap next word in single quotes' })
 vim.keymap.set('n', '<leader>"', 'cw"<Esc>pa"<Esc>', { desc = 'Wrap next word in double quotes' })
-vim.keymap.set('n', '<leader>x', '<cmd>FTermToggle<cr>', { desc = 'Toggle floating terminal' })
 vim.keymap.set('n', '<leader>r', ':FTermRun ', { desc = 'Run command in floating terminal' })
 
 vim.keymap.set('i', '<C-h>', '<Left>', { desc = 'Move left' })

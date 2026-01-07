@@ -30,7 +30,6 @@ end
 vim.api.nvim_create_user_command('FTermToggle', require('FTerm').toggle, { bang = true })
 vim.api.nvim_create_user_command('FTermExit', require('FTerm').exit, { bang = true })
 vim.api.nvim_create_user_command('FTermRun', function(opts)
-  -- require('FTerm').scratch { cmd = { 'cargo', 'build' } }
   local command = split(opts.args)
 
   require('FTerm').scratch({ cmd = command })
