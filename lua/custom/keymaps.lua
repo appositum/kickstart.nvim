@@ -31,7 +31,6 @@ vim.keymap.set('v', '>', '>gv', { desc = 'Indent line' })
 
 vim.keymap.set('x', 'p', 'P', { desc = 'Paste without yanking in visual mode' })
 
-vim.keymap.set('t', '<leader>x', '<cmd>FTermToggle<cr>', { desc = 'Toggle floating terminal' })
 vim.keymap.set('n', '<leader>l', function()
   vim.diagnostic.open_float()
 end)
