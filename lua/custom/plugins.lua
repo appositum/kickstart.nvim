@@ -97,32 +97,18 @@ return {
           },
           lualine_b = {
             {
-              'filetype',
-              icon_only = true,
-              colored = false,
-              separator = '',
-              padding = {
-                right = 0,
-                left = 1,
-              },
-            },
-            {
-              'filename',
+              'buffers',
+              use_mode_colors = true,
               symbols = {
-                modified = '',
-              },
-            },
-            {
-              'diagnostics',
-              symbols = {
-                error = ' ',
-                warn = ' ',
-                info = ' ',
+                alternate_file = ' ',
               },
             },
           },
           lualine_c = {
-            'branch',
+            {
+              'branch',
+              component_separators = '',
+            },
             {
               'diff',
               symbols = {
@@ -134,7 +120,15 @@ return {
             },
           },
           lualine_x = {
-            -- icon =
+            {
+              'diagnostics',
+              symbols = {
+                error = ' ',
+                warn = ' ',
+                info = ' ',
+              },
+              component_separators = '', -- no | between icons and LSP: <lsp_name>
+            },
             {
               function()
                 local msg = 'No Active Lsp'
