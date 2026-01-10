@@ -155,11 +155,41 @@ return {
 
                 return msg
               end,
-              icon = ' LSP:',
+              icon = '',
+              -- symbols = {
+              --   -- TODO: create function to get lsp status percentage
+              --   spinners = { "", "󰪞", "󰪟", "󰪠", "󰪡", "󰪢", "󰪣", "󰪤", "󰪥" }
+              --   done = '',
+              -- },
             },
           },
-          lualine_y = { 'progress' },
-          lualine_z = { 'location' },
+
+          lualine_y = {
+            -- 󰉋
+            -- 
+            -- 󰉖
+
+            -- current working directory name for the buffer
+            function()
+              -- % = current buffer
+              -- p = full path
+              -- h = head (remove last component (filename))
+              -- t = tail (last component only)
+              -- 󰉋  󰉖
+              local session_name = require('auto-session.lib').current_session_name(true)
+              local cwd_name = '󰉋 ' .. vim.fn.expand '%:p:h:t'
+              return session_name .. ' | ' .. cwd_name
+            end,
+          },
+          lualine_z = {
+            -- 
+            -- 
+            -- 
+            {
+              'location',
+              icon = '',
+            },
+          },
         },
       }
     end,
