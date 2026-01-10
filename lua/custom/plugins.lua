@@ -321,4 +321,30 @@ return {
     --   },
     -- },
   },
+  {
+    'rmagatti/auto-session',
+    lazy = false,
+    keys = {
+      { '<leader>sf', '<cmd>AutoSession search<CR>', desc = '[s]ession [f]ind' },
+      { '<leader>ss', '<cmd>AutoSession save<CR>', desc = '[s]ave [s]ession' },
+      { '<leader>sa', '<cmd>AutoSession toggle<CR>', desc = 'Toggle [s]ession [a]utosave' },
+    },
+
+    ---enables autocomplete for opts
+    ---@module "auto-session"
+    ---@type AutoSession.Config
+    opts = {
+      auto_restore_last_session = true,
+      session_lens = {
+        picker = 'telescope',
+        mappings = {
+          delete_session = { 'n', '<leader>d' },
+          copy_session = { 'n', '<leader>c' },
+        },
+        picker_opts = {
+          initial_mode = 'normal',
+        },
+      },
+    },
+  },
 }
