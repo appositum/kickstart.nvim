@@ -140,15 +140,19 @@ return {
                 local msg = 'No Active Lsp'
                 local buf_ft = vim.api.nvim_get_option_value('filetype', { buf = 0 })
                 local clients = vim.lsp.get_clients()
+
                 if next(clients) == nil then
                   return msg
                 end
+
                 for _, client in ipairs(clients) do
                   local filetypes = client.config.filetypes
+
                   if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
                     return client.name
                   end
                 end
+
                 return msg
               end,
               icon = ' LSP:',
@@ -289,10 +293,10 @@ return {
     },
   },
   {
-    "epwalsh/obsidian.nvim",
-    version = "*",  -- recommended, use latest release instead of latest commit
+    'epwalsh/obsidian.nvim',
+    version = '*', -- recommended, use latest release instead of latest commit
     lazy = true,
-    ft = "markdown",
+    ft = 'markdown',
     -- Replace the above line with this if you only want to load obsidian.nvim for markdown files in your vault:
     -- event = {
     --   -- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand'.
@@ -302,7 +306,7 @@ return {
     --   "BufNewFile path/to/my-vault/*.md",
     -- },
     dependencies = {
-      "nvim-lua/plenary.nvim",
+      'nvim-lua/plenary.nvim',
     },
     -- opts = {
     --   workspaces = {
