@@ -170,7 +170,10 @@ return {
               -- h = head (remove last component (filename))
               -- t = tail (last component only)
               -- 󰉋  󰉖
-              local session_name = require('auto-session.lib').current_session_name(true)
+              local session_name = '󰉓 ' .. require('auto-session.lib').current_session_name(true)
+              -- 
+              -- 󰉋
+              -- 󰉓
               local cwd_name = '󰉋 ' .. vim.fn.expand '%:p:h:t'
               return session_name .. ' | ' .. cwd_name
             end,
