@@ -100,7 +100,7 @@ return {
               'buffers',
               use_mode_colors = true,
               symbols = {
-                alternate_file = ' ',
+                alternate_file = ' ',
               },
             },
           },
