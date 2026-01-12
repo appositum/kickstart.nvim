@@ -170,12 +170,17 @@ return {
               -- h = head (remove last component (filename))
               -- t = tail (last component only)
               -- 󰉋  󰉖
-              local session_name = '󰉓 ' .. require('auto-session.lib').current_session_name(true)
+              local session_name = require('auto-session.lib').current_session_name(true)
+              local session = ' ' .. session_name
               -- 
               -- 󰉋
               -- 󰉓
-              local cwd_name = '󰉋 ' .. vim.fn.expand '%:p:h:t'
-              return session_name .. ' | ' .. cwd_name
+              local cwd = '󰉋 ' .. vim.fn.expand '%:p:h:t'
+              if session_name == '' then
+                return cwd
+              else
+                return session .. ' | ' .. cwd
+              end
             end,
           },
           lualine_z = {
