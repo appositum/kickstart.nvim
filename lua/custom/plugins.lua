@@ -366,7 +366,7 @@ return {
         picker = 'telescope',
         mappings = {
           delete_session = { 'n', '<leader>d' },
-          copy_session = { 'n', '<leader>c' },
+          copy_session = { 'n', '<leader>y' },
         },
         picker_opts = {
           initial_mode = 'normal',
