@@ -181,10 +181,9 @@ return {
           lualine_z = {
             -- 
             -- 
-            -- 
             {
               'location',
-              icon = '',
+              icon = '',
             },
           },
         },
