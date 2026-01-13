@@ -1,5 +1,3 @@
-require 'custom.theme'
-
 return {
   {
     'kdheepak/lazygit.nvim',
@@ -20,18 +18,6 @@ return {
     keys = {
       { '<leader>gg', '<cmd>LazyGit<cr>', desc = 'LazyGit' },
     },
-  },
-  {
-    'catppuccin/nvim',
-    name = 'catppuccin',
-    priority = 1000,
-    config = function()
-      require('catppuccin').setup {
-        styles = {
-          comments = { 'nocombine' }, -- Disable italics in comments
-        },
-      }
-    end,
   },
   {
     'sainnhe/everforest',
@@ -72,7 +58,6 @@ return {
       }
       require('lualine').setup {
         options = {
-          theme = THEME_LUALINE,
           icons_enabled = true,
           -- component_separators = { left = '', right = '' },
           -- section_separators = { left = '', right = '' },
