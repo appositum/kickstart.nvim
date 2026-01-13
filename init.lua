@@ -343,7 +343,7 @@ require('lazy').setup({
             mappings = {
               n = {
                 ['<leader>d'] = 'delete_buffer',
-                ['<leader>s'] = 'file_split',
+                ['<leader>h'] = 'file_split',
                 ['<leader>v'] = 'file_vsplit',
               },
             },
@@ -353,7 +353,7 @@ require('lazy').setup({
             initial_mode = 'normal',
             mappings = {
               n = {
-                ['<leader>s'] = 'file_split',
+                ['<leader>h'] = 'file_split',
                 ['<leader>v'] = 'file_vsplit',
               },
             },
