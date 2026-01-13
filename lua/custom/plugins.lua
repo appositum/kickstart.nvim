@@ -82,11 +82,20 @@ return {
           },
           lualine_b = {
             {
-              'buffers',
-              use_mode_colors = true,
-              symbols = {
-                alternate_file = ' ',
+              'filetype',
+              icon_only = true,
+              colored = false,
+              separator = '',
+              padding = {
+                right = 0,
+                left = 1,
               },
+            },
+            {
+              'filename',
+              symbols = {
+                modified = '●',
+              }
             },
           },
           lualine_c = {
@@ -365,4 +374,27 @@ return {
       },
     },
   },
+  {
+    'akinsho/bufferline.nvim',
+    dependencies = 'nvim-tree/nvim-web-devicons',
+    config = function()
+      local bufferline = require('bufferline')
+      bufferline.setup({
+        highlights = {
+          fill = {
+            bg = '#181825'
+          },
+          tab_selected = {
+            bg = '#fab387',
+            fg = '#181825'
+          },
+          tab_separator_selected = {
+            bg = '#fab387'
+          },
+        },
+        options = {
+        }
+      })
+    end,
+  }
 }
