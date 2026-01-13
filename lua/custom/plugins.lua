@@ -391,6 +391,9 @@ return {
           tab_separator_selected = {
             bg = '#fab387'
           },
+          indicator_selected = {
+            fg = '#b4befe'
+          },
         },
         options = {
         }
