@@ -124,8 +124,13 @@ return {
               component_separators = '', -- no | between icons and LSP: <lsp_name>
             },
             {
+              -- symbols = {
+              --   -- TODO: create function to get lsp status percentage
+              --   spinners = { "", "󰪞", "󰪟", "󰪠", "󰪡", "󰪢", "󰪣", "󰪤", "󰪥" }
+              --   done = '',
+              -- },
               function()
-                local msg = 'No Active Lsp'
+                local msg = ''
                 local buf_ft = vim.api.nvim_get_option_value('filetype', { buf = 0 })
                 local clients = vim.lsp.get_clients()
 
@@ -137,18 +142,17 @@ return {
                   local filetypes = client.config.filetypes
 
                   if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-                    return client.name
+                    return msg .. ' ' .. client.name
                   end
                 end
 
                 return msg
               end,
-              icon = '',
-              -- symbols = {
-              --   -- TODO: create function to get lsp status percentage
-              --   spinners = { "", "󰪞", "󰪟", "󰪠", "󰪡", "󰪢", "󰪣", "󰪤", "󰪥" }
-              --   done = '',
-              -- },
+              color = function(_section)
+                if next(vim.lsp.get_clients()) == nil then
+                  return { fg = '#6c7086' }
+                end
+              end
             },
           },
           lualine_y = {
