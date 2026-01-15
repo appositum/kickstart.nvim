@@ -359,8 +359,8 @@ return {
     'rmagatti/auto-session',
     lazy = false,
     keys = {
-      { '<leader>sf', '<cmd>AutoSession search<CR>', desc = '[s]ession [f]ind' },
-      { '<leader>ss', '<cmd>AutoSession save<CR>', desc = '[s]ave [s]ession' },
+      { '<leader>ss', '<cmd>AutoSession search<CR>', desc = '[s]earch [s]ession' },
+      { '<leader>sw', '<cmd>AutoSession save<CR>', desc = 'Save session (write)' },
       { '<leader>sa', '<cmd>AutoSession toggle<CR>', desc = 'Toggle [s]ession [a]utosave' },
     },
 
@@ -368,6 +368,7 @@ return {
     ---@module "auto-session"
     ---@type AutoSession.Config
     opts = {
+      suppressed_dirs = { '~/' },
       session_lens = {
         picker = 'telescope',
         mappings = {
