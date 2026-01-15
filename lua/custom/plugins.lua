@@ -96,7 +96,7 @@ return {
               symbols = {
                 modified = '●',
                 readonly = '󰌾'
-              }
+              },
             },
           },
           lualine_c = {
@@ -153,7 +153,7 @@ return {
                 if next(vim.lsp.get_clients()) == nil then
                   return { fg = '#45475a' }
                 end
-              end
+              end,
             },
           },
           lualine_y = {
@@ -171,7 +171,7 @@ return {
                 -- p = full path
                 -- h = head (remove last component (filename))
                 -- t = tail (last component only)
-                local cwd_name = vim.fn.expand('%:p:~:h:t')
+                local cwd_name = vim.fn.expand '%:p:~:h:t'
 
                 if cwd_name == '~' then
                   return ''
@@ -384,26 +384,25 @@ return {
     'akinsho/bufferline.nvim',
     dependencies = 'nvim-tree/nvim-web-devicons',
     config = function()
-      local bufferline = require('bufferline')
-      bufferline.setup({
+      local bufferline = require 'bufferline'
+      bufferline.setup {
         highlights = {
           fill = {
-            bg = '#181825'
+            bg = '#181825',
           },
           tab_selected = {
             bg = '#fab387',
-            fg = '#181825'
+            fg = '#181825',
           },
           tab_separator_selected = {
-            bg = '#fab387'
+            bg = '#fab387',
           },
           indicator_selected = {
-            fg = '#b4befe'
+            fg = '#b4befe',
           },
         },
-        options = {
-        }
-      })
+        options = {},
+      }
     end,
-  }
+  },
 }
