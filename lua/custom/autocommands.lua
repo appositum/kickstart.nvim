@@ -26,11 +26,11 @@ local function split(s)
   return res
 end
 
-
 vim.api.nvim_create_user_command('FTermToggle', require('FTerm').toggle, { bang = true })
 vim.api.nvim_create_user_command('FTermExit', require('FTerm').exit, { bang = true })
 vim.api.nvim_create_user_command('FTermRun', function(opts)
   local command = split(opts.args)
 
-  require('FTerm').scratch({ cmd = command })
+  -- NOTE: if the command fails, the FTerm window remains open and needs to be closed manually
+  require('FTerm').scratch { cmd = command }
 end, { bang = true, nargs = '?' })
