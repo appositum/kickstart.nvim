@@ -331,9 +331,9 @@ return {
   {
     'numToStr/FTerm.nvim',
     keys = {
-      { '<A-i>', '<cmd>FTermToggle<cr>', desc = '[T]oggle FTerm' },
-      { '<A-i>', '<cmd>FTermToggle<cr>', mode = { 't' } },
-      { '<A-k>', '<cmd>FTermExit<cr>', mode = { 't' } },
+      { '<leader>i', '<cmd>FTermToggle<cr>', desc = '[T]oggle FTerm' },
+      { '<leader>i', '<cmd>FTermToggle<cr>', mode = { 't' } },
+      { '<leader>k', '<cmd>FTermExit<cr>', mode = { 't' } },
     },
   },
   {
