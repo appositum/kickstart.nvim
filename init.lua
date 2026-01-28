@@ -853,7 +853,6 @@ require('lazy').setup({
       signature = { enabled = true },
     },
   },
-
   {
     'catppuccin/nvim',
     name = 'catppuccin',

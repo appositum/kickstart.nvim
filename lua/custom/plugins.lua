@@ -95,11 +95,11 @@ return {
               'filename',
               symbols = {
                 modified = '●',
-                readonly = '󰌾'
+                readonly = '󰌾',
               },
               fmt = function(filename)
                 local buffer_name = vim.api.nvim_buf_get_name(vim.api.nvim_get_current_buf())
-                local shell_name = buffer_name:match('^term.*/(.*)$')
+                local shell_name = buffer_name:match '^term.*/(.*)$'
 
                 if shell_name then
                   return '  ' .. shell_name
@@ -307,7 +307,7 @@ return {
     init = function()
       vim.g.vimwiki_list = {
         {
-          path = '~/notes',
+          path = '/mnt/d/Nextcloud/Notas/',
           syntax = 'markdown',
           ext = 'md',
         },
