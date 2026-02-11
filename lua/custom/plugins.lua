@@ -307,7 +307,7 @@ return {
     init = function()
       vim.g.vimwiki_list = {
         {
-          path = '/mnt/d/Nextcloud/Notas/',
+          path = '~/Nextcloud/Notas/',
           syntax = 'markdown',
           ext = 'md',
         },
@@ -331,9 +331,9 @@ return {
   {
     'numToStr/FTerm.nvim',
     keys = {
-      -- { '<C-i>', '<cmd>FTermToggle<cr>', desc = 'Toggle FTerm' },
-      -- { '<C-i>', '<cmd>FTermToggle<cr>', mode = { 't' } },
-      -- { '<C-k>', '<cmd>FTermExit<cr>', mode = { 't' } },
+      { '<A-i>', '<cmd>FTermToggle<cr>', desc = '[T]oggle FTerm' },
+      { '<A-i>', '<cmd>FTermToggle<cr>', mode = { 't' } },
+      { '<A-k>', '<cmd>FTermExit<cr>', mode = { 't' } },
     },
   },
   {
