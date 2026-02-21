@@ -24,10 +24,6 @@ return {
     priority = 1000,
   },
   {
-    'rebelot/kanagawa.nvim',
-    priority = 1000,
-  },
-  {
     'thesimonho/kanagawa-paper.nvim',
     priority = 1000,
   },
@@ -399,17 +395,22 @@ return {
       bufferline.setup {
         highlights = {
           fill = {
-            bg = '#181825',
+            -- bg = '#181825', -- catppuccin
+            bg = '#16161D', -- kanagawa
           },
           tab_selected = {
-            bg = '#fab387',
-            fg = '#181825',
+            -- bg = '#fab387', -- catppuccin
+            -- fg = '#181825', -- catppuccin
+            bg = '#FFA066', -- kanagawa
+            fg = '#16161D', -- kanagawa
           },
           tab_separator_selected = {
-            bg = '#fab387',
+            -- bg = '#fab387', -- catppuccin
+            bg = '#FFA066', -- kanagawa
           },
           indicator_selected = {
-            fg = '#b4befe',
+            -- fg = '#b4befe', -- catppuccin
+            fg = '#7E9CD8', -- kanagawa
           },
         },
         options = {},

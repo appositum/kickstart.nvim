@@ -855,18 +855,39 @@ require('lazy').setup({
       signature = { enabled = true },
     },
   },
+  -- {
+  --   'catppuccin/nvim',
+  --   name = 'catppuccin',
+  --   priority = 1000,
+  --   config = function()
+  --     require('catppuccin').setup {
+  --       styles = {
+  --         comments = { 'nocombine' }, -- Disable italics in comments
+  --       },
+  --     }
+  --
+  --     vim.cmd.colorscheme 'catppuccin-mocha'
+  --   end,
+  -- },
   {
-    'catppuccin/nvim',
-    name = 'catppuccin',
+    'rebelot/kanagawa.nvim',
+    name = 'kanagawa',
     priority = 1000,
     config = function()
-      require('catppuccin').setup {
-        styles = {
-          comments = { 'nocombine' }, -- Disable italics in comments
-        },
-      }
+      require('kanagawa').setup({
+        colors = {
+          theme = {
+            all = {
+              ui = {
+                bg_gutter = "none"
+              }
+            }
+          }
+        }
+      })
 
-      vim.cmd.colorscheme 'catppuccin-mocha'
+      vim.cmd.colorscheme 'kanagawa-wave'
+      vim.api.nvim_set_hl(0, "CursorLineNr", { fg='#C0A36E' })
     end,
   },
   -- { -- You can easily change to a different colorscheme.
